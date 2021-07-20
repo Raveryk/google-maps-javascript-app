@@ -30,6 +30,18 @@ function initMap() {
     marker.addListener( 'click', function() {
         infoWindow.open( map, marker );
     });
+
+    const centerButton = document.querySelector( '#bringToCenter' );
+
+    centerButton.addEventListener( 'click', function( e ) {
+        e.preventDefault();
+        map.setCenter({
+            lat: 44.9736,
+            lng: -93.2575
+        })
+    })
+
+    
 }
 
 
