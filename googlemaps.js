@@ -20,7 +20,15 @@ function initMap() {
             lng: -93.2575
         },
         map: map,
-        title: 'US Bank Stadium'
+        title: 'US Bank Stadium',
+    });
+
+    let infoWindow = new google.maps.InfoWindow({
+        content: '<h4>US Bank Stadium</h4>'
+    });
+
+    marker.addListener( 'click', function() {
+        infoWindow.open( map, marker );
     });
 }
 
